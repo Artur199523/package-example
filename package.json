@@ -1,0 +1,62 @@
+{
+  "name": "@artur199523/package-example",
+  "version": "1.0.2",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "author": "amatic-crypto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Artur199523/package-example.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@artur199523"
+  },
+  "scripts": {
+    "start": "start-storybook -p 3001 --ci -c config/storybook",
+    "build": "build-storybook -o ./build -c config/storybook",
+    "build:lib": "npm run rm:lib && rollup --config rollup.config.js",
+    "publish:lib": "npm run build:lib && git add . && npm run basetag && npm run rm:lib",
+    "basetag": "npm version patch --force && git push origin main --tag && echo \"Successfully released version $npm_package_version!\"",
+    "rm:lib": "rm -rf dist",
+    "prepare": "npm run build:lib",
+    "local:server": "npx http-server build"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@reach/dialog": "^0.17.0",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^17.0.33",
+    "babel-loader": "^8.2.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.77.2",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook-css-modules": "^1.0.8",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || 17.x",
+    "react-dom": "^16.8.0 || 17.x",
+    "classnames": "^2.3.2"
+  }
+}
