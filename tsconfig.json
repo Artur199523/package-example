@@ -15,7 +15,7 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
   },
-  "include": ["components/**/*.ts", "components/**/*.tsx"],
+  "include": ["components/**/*.ts", "components/**/*.tsx","declaration.d.ts"],
   "exclude": [
     "dist",
     "node_modules",

@@ -10,15 +10,17 @@
         cursor: not-allowed;
     }
 
-    &.primary {
-        background-color: var(--primary600);
-        border: 1px solid var(--primary600);
-        color: #FFFFFF;
 
-        &.outline{
-            background-color: transparent;
-            color: var(--primary600);
-        }
+}
+
+.primary {
+    background-color: var(--primary600);
+    border: 1px solid var(--primary600);
+    color: #FFFFFF;
+
+    &.outline{
+        background-color: transparent;
+        color: var(--primary600);
     }
 }
 
