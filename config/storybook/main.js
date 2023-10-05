@@ -7,7 +7,18 @@ module.exports = {
         "@storybook/addon-links",
         "@storybook/addon-essentials",
         "@storybook/addon-interactions",
-        "storybook-css-modules",
+        'storybook-addon-sass-postcss',
+        {
+            name: "@storybook/addon-styling",
+            options: {
+                sass: {
+                    implementation: require("sass"),
+                },
+            }
+        }
     ],
-    "framework": "@storybook/react"
+    "framework": "@storybook/react",
+    core: {
+        builder: "@storybook/builder-webpack5",
+    },
 }

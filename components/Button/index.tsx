@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonPropTypes } from "../types/Button.types";
-import styles from "./button.module.css";
+import  "./button.scss"
 import cs from "classnames";
 
 const Button: React.FC<ButtonPropTypes> = (props) => {
@@ -13,13 +13,7 @@ const Button: React.FC<ButtonPropTypes> = (props) => {
         className,
         ...rest
     } = props;
-    const classNames = cs({
-        [styles.Button]: true,
-        [styles[color]]: true,
-        [styles[size]]: true,
-        [styles.outline]: version === "outline",
-        [className as string]: !!className,
-    });
+    const classNames = cs("Buttons",color ?? "primary",size ?? "medium",version ?? "inline");
 
     return (
         <button className={classNames} type="button" onClick={onClick} {...rest}>
