@@ -1,69 +1,200 @@
-.Buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    cursor: pointer;
+@import "styles/vars";
+@import "styles/mixins";
+@import "styles/colors";
+@import "styles/typography";
 
-    &:disabled{
-        opacity: 0.5;
+.button {
+    gap: 8px;
+    width: 100%;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    max-height: 48px;
+    @extend %button-text;
+    @extend %flex-center;
+
+    &:disabled {
         cursor: not-allowed;
     }
+}
 
+.loading {
+    border: 1px solid $success;
+    @extend %body1-r;
+    gap: 15px;
+}
 
+.primary__loading {
+    color: $white;
+    background-color: $success;
+
+    div > div > div:nth-child(1) {
+        border-color: $success-50;
+    }
+}
+
+.secondary__loading {
+    color: $success;
+    background-color: unset;
+    border: 1px solid $success;
+
+    div > div > div:nth-child(1) {
+        border-color: $success;
+    }
 }
 
 .primary {
-    background-color: var(--primary600);
-    border: 1px solid var(--primary600);
-    color: #FFFFFF;
+    color: $white;
+    background-color: $primary-10;
+    border: 1px solid $primary-10;
 
-    &.outline{
-        background-color: transparent;
-        color: var(--primary600);
+    &__filled {
+        @include svgFill($white);
+
+        &:hover {
+            background-color: $primary-200;
+            border: 1px solid $primary-200;
+        }
+
+        &:disabled {
+            @include svgFill($secondary-1300);
+        }
+    }
+
+    &:disabled {
+        color: $secondary-1300;
+        background-color: unset;
+        border: 1px solid $secondary-1300;
+    }
+
+    &:focus {
+        border: 1px solid $primary-1500;
     }
 }
 
+.secondary {
+    border: 1px solid $button-secondary-border;
+    background-color: unset;
+    color: $button-secondary-text;
 
+    &__filled {
+        @include svgFill($button-secondary-text);
 
-.red {
-    background-color: var(--red600);
-    border: 1px solid var(--red600);
-    color: #FFFFFF;
+        &:hover {
+            @include svgFill($primary-10) {
+                transition: all 0.2s;
+            }
+        }
+    }
 
-    &.outline{
-        background-color: transparent;
-        color: var(--red600);
+    &:hover {
+        color: $button-secondary-text-hover;
+        background-color: $button-secondary-bg-hover;
+    }
+
+    &:disabled {
+        color: $button-secondary-text-disabled;
+        border-color: $button-secondary-border-disabled;
+        @include svgFill($button-secondary-text-disabled);
+    }
+
+    &:focus {
+        border-color: $primary-1600;
     }
 }
 
-.gray {
-    background-color: #344054;
-    border: 1px solid #344054;
-    color: white;
+.tertiary {
+    color: $button-tertiary-text;
+    background-color: $button-tertiary-bg;
+    border: 1px solid transparent;
 
-    &.outline{
-        background-color: transparent;
-        color: #344054;
-        border: 1px solid #D0D5DD;
+    &__filled {
+        @include svgFill($button-tertiary-text);
+
+        &:hover {
+            @include svgFill($button-tertiary-text-hover-focus);
+        }
+
+        &:disabled {
+            @include svgFill($button-tertiary-text-disabled);
+        }
+    }
+
+    &:hover {
+        color: $button-tertiary-text-hover-focus;
+        background-color: $button-tertiary-bg-hover-focus;
+    }
+
+    &:disabled {
+        color: $button-tertiary-text-disabled;
+        background-color: $button-tertiary-bg-disabled;
+    }
+
+    &:focus {
+        color: $button-tertiary-text-hover-focus;
+        background-color: $button-tertiary-bg-hover-focus;
+        border: 1px solid $button-tertiary-border-focus;
+    }
+}
+
+.large__only__icon {
+    padding: 11px !important;
+}
+
+.medium__only__icon {
+    padding: 9px !important;
+}
+
+.small__only__icon {
+    padding: 6px !important;
+}
+
+.large {
+    padding: 12px 32px;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        @extend %flex-center;
+        @include svgSize(24px);
+
+        & > div > div {
+            width: 20px !important;
+            height: 20px !important;
+        }
+    }
+}
+
+.medium {
+    padding: 9px 50px;
+    @extend %body2-sb;
+
+    &__icon {
+        @extend %flex-center;
+        width: 20px;
+        height: 20px;
+        @include svgSize(20px);
+
+        & > div > div {
+            width: 18px !important;
+            height: 18px !important;
+        }
     }
 }
 
 .small {
-    height: 30px;
-    border-radius: 4px;
-    min-width: 100px;
-}
-.medium {
-    border-radius: 4px;
-    height: 36px;
-    min-width: 150px;
-    font-size: 14px;
-}
-.large {
-    min-width: 200px;
-    height: 44px;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 16px;
+    padding: 6px 18px;
+    @extend %body2-sb;
+
+    &__icon {
+        @extend %flex-center;
+        width: 20px;
+        height: 20px;
+        @include svgSize(20px);
+
+        & > div > div {
+            width: 14px !important;
+            height: 14px !important;
+        }
+    }
 }

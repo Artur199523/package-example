@@ -1,0 +1,193 @@
+@import "./vars";
+
+@mixin breakpoint($devices) {
+  @if $devices == mobile {
+    @media (max-width: $mobile-m) {
+      @content;
+    }
+  } @else if $devices == tablet-l {
+    @media (max-width: $tablet-l) {
+      @content;
+    }
+  } @else if $devices == tablet-m {
+    @media (max-width: $tablet-m) {
+      @content;
+    }
+  } @else if $devices == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $devices == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  } @else if $devices == wide {
+    @media (max-width: $wide) {
+      @content;
+    }
+  } @else if $devices == wide-l {
+    @media (max-width: $wide-l) {
+      @content;
+    }
+  }
+}
+
+@mixin svgFill($color, $size: false) {
+  svg {
+    @if $size {
+      width: $size;
+      height: $size;
+    }
+
+    path {
+      transition: all 0.5s;
+      fill: $color;
+      @content;
+    }
+  }
+}
+
+@mixin svgSize($size, $minMaxSize: false) {
+  svg {
+    @content;
+
+    @if $minMaxSize {
+      min-width: $minMaxSize;
+      min-height: $minMaxSize;
+      max-width: $minMaxSize;
+      max-height: $minMaxSize;
+    } @else {
+      width: $size;
+      height: $size;
+    }
+  }
+}
+
+@mixin scrollbar($width) {
+  &::-webkit-scrollbar {
+    width: $width;
+    @content;
+
+    @media (min-height: 940px) {
+      width: 0;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: $secondary-1100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $primary-200;
+
+    &:hover {
+      background-color: $primary-1200;
+    }
+  }
+}
+
+@mixin scrollbarHorizontal($height) {
+  &::-webkit-scrollbar {
+    height: $height;
+
+    @content;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: $secondary-1100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $primary-200;
+
+    &:hover {
+      background-color: $primary-1200;
+    }
+  }
+}
+
+@mixin pageScroll($scrollBarWidth) {
+  height: calc(100vh - 152px);
+  @include scrollbar($scrollBarWidth);
+  overflow: auto;
+  max-height: 788px;
+}
+
+@mixin pageLayout() {
+  overflow-y: auto;
+  max-height: 788px;
+  height: calc(100vh - 152px);
+  padding-right: 12px;
+  margin-right: -13px;
+
+  @media (max-width: $desktop) {
+    height: auto;
+    width: 100%;
+    margin-top: 66px;
+    padding: 16px 16px 114px;
+    max-height: unset;
+    overflow-y: unset;
+    @include scrollbar(0);
+  }
+}
+
+@mixin blueBorderedSocialLinks() {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid $social-links;
+  transition: 0.2s all ease-in-out;
+  @extend %flex-center;
+
+  @media (max-width: $mobile-m) {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background-color: $social-links-hover;
+  }
+
+  @include svgFill($social-links);
+  @include svgSize(20px, 20px);
+}
+
+@mixin spinningAnimation($iterationCount, $duration, $reverse: false) {
+  @if $reverse {
+    animation: spinning reverse $duration linear $iterationCount;
+  } @else {
+    animation: spinning $duration linear $iterationCount;
+  }
+
+  @keyframes spinning {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+$breakpoints: (
+        mobile: $mobile-m,
+        tablet-l: $tablet-l,
+        tablet-m: $tablet-m,
+        tablet: $tablet,
+        desktop: $desktop,
+        wide: $wide,
+        wide-l: $wide-l,
+);
+
+@mixin breakpoint($device) {
+  $width: map-get($breakpoints, $device);
+  @media (max-width: $width) {
+    @content;
+  }
+}

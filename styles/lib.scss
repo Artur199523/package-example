@@ -1,0 +1,50 @@
+@import "styles/mixins";
+
+/** Recharts */
+.recharts-wrapper {
+  width: 100% !important;
+}
+/** :*/
+
+/** React alice carousel */
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  padding: 0;
+  display: block;
+}
+
+.alice-carousel__wrapper {
+  border-radius: 16px;
+}
+/** : */
+
+/** MUI { */
+/**    DatePicker { */
+.MuiPickersCalendarHeader-root,
+.MuiDayCalendar-header {
+  display: none !important;
+}
+
+.MuiStack-root {
+  width: 100%;
+  flex-direction: unset !important;
+  justify-content: space-between;
+}
+
+.MuiYearCalendar-root {
+  @include scrollbar(4px);
+}
+/** : */
+
+.MuiInputBase-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid $primary-300 !important;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root {
+  color: inherit !important;
+  padding: 0 !important;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+  color: #0095fa !important;
+}

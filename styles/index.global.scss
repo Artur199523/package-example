@@ -1,0 +1,14 @@
+// Local css base
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./local.scss";
+@import "./mixins.scss";
+@import "./typography.scss";
+@import "./vars.scss";
+@import "./lib.scss";
+@import "./themeColors.scss";
+
+* {
+  font-family: "Rubik", sans-serif !important;
+  font-variant-ligatures: none !important;
+}

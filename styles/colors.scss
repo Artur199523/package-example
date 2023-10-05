@@ -1,0 +1,207 @@
+// primary
+$primary-10: #0095fa;
+$primary-100: #0086e1;
+$primary-200: #0077c8;
+$primary-300: #0068af;
+$primary-400: #005996;
+$primary-500: #004b7d;
+$primary-600: #003c64;
+$primary-700: #002d4b;
+$primary-800: #001e32;
+$primary-900: #000f19;
+$primary-1100: #19a0fb;
+$primary-1200: #33aafb;
+$primary-1300: #4db5fc;
+$primary-1400: #66bffc;
+$primary-1500: #80cafd;
+$primary-1600: #99d5fd;
+$primary-1700: #b3dffe;
+$primary-1800: #cceafe;
+$primary-1900: #e6f4ff;
+$primary-2000: #dcedff;
+
+// secondary
+$secondary-30: #0f2640;
+$secondary-100: #0e223a;
+$secondary-200: #0c1e33;
+$secondary-300: #0b1b2d;
+$secondary-400: #091726;
+$secondary-500: #081320;
+$secondary-600: #060f1a;
+$secondary-700: #050b13;
+$secondary-800: #03080d;
+$secondary-900: #010406;
+$secondary-1100: #273c53;
+$secondary-1200: #3f5166;
+$secondary-1300: #576779;
+$secondary-1400: #6f7d8c;
+$secondary-1500: #8793a0;
+$secondary-1600: #9fa8b3;
+$secondary-1700: #b7bec6;
+$secondary-1800: #cfd4d9;
+$secondary-1900: #e7e9ec;
+
+//background
+$background-60: #000a11;
+$background-90: #0f1e29;
+$background-80: #142837;
+$background-70: #193344;
+$background-190: #070f14;
+$background-180: hsl(203, 44%, 4%);
+$background-170: #030507;
+
+//error
+$error: #ed5151;
+$error-125: #b23d3d;
+$error-75: #f27d7d;
+$error-50: #f6a8a8;
+$error-25: #fbd4d4;
+
+//success
+$success: #0aba6e;
+$success-150: #032f1c;
+$success-125: #088c53;
+$success-75: #47cb92;
+$success-50: #85ddb7;
+$success-25: #c2eedb;
+$success-750: #032f1c;
+
+//warning
+
+$warning-750: #3b2811;
+$warning: #eb9f45;
+$warning-750: #3b2811;
+$warning-125: #b07734;
+$warning-75: #f0b774;
+$warning-50: #f5cfa2;
+$warning-25: #fae7d1;
+
+//info
+$info: #266bd2;
+$info-125: #1d509e;
+$info-75: #5c90dd;
+$info-50: #93b5e9;
+$info-25: #c9daf4;
+
+//rgba colors
+$background: rgba(0, 0, 0, 0.7);
+
+// global colors
+$white: #fff;
+$black: #000;
+$yellow: #f5a622;
+
+//theme colors
+$body-bg: var(--body-bg);
+
+$heading: var(--heading);
+$header-bg: var(--header-bg);
+$header-item-bg: var(--header-item-bg);
+$header-menu-button: var(--header-menu-button);
+$header-menu-button-focus: var(--header-menu-button-focus);
+
+$mode-switch-svg: var(--mode-switch-svg);
+$mode-switch-svg-hover: var(--mode-switch-svg-hover);
+$mode-switch-border: var(--mode-switch-border);
+$mode-switch-shadow: var(--mode-switch-shadow);
+$mode-switch-item-bg: var(--mode-switch-item-bg);
+
+$dropdown-dots: var(--dropdown-dots);
+$dropdown-dots-bg: var(--dropdown-dots-bg);
+$dropdown-dots-hover: var(--dropdown-dots-hover);
+$dropdown-hover: var(--dropdown-hover);
+$dropdown-bg: var(--dropdwon-bg);
+
+$lang-drop: var(--lang-drop);
+
+$button-secondary-text: var(--button-secondary-text);
+$button-secondary-text-hover: var(--button-secondary-text-hover);
+$button-secondary-text-disabled: var(--button-secondary-text-disabled);
+$button-secondary-border: var(--button-secondary-border);
+$button-secondary-border-hover: var(--button-secondary-border-hover);
+$button-secondary-border-disabled: var(--button-secondary-border-disabled);
+$button-secondary-bg-hover: var(--button-secondary-bg-hover);
+
+$button-tertiary-text: var(--button-tertiary-text);
+$button-tertiary-text-hover-focus: var(--button-tertiary-text-hover-focus);
+$button-tertiary-text-disabled: var(--button-tertiary-text-disabled);
+$button-tertiary-border-focus: var(--button-tertiary-border-focus);
+$button-tertiary-bg: var(--button-tertiary-bg);
+$button-tertiary-bg-hover-focus: var(--button-tertiary-bg-hover-focus);
+$button-tertiary-bg-disabled: var(--button-tertiary-bg-disabled);
+
+$account-switch-icon: var(--account-switch-icon);
+$account-switch-icon-active: var(--account-switch-icon-active);
+$account-switch-icon-deactive: var(--account-switch-icon-deactive);
+$account-switch-wrapper: var(--account-switch-wrapper);
+$account-switch-text: var(--account-switch-text);
+$account-switch-arrow: var(--account-switch-arrow);
+$account-switch-arrow-bg: var(--account-switch-arrow-bg);
+$account-switch-container: var(--account-switch-container);
+$account-switch-title: var(--account-switch-title);
+
+$myaccount-button-bg: var(--myaccount-button-bg);
+$myaccount-button-bg-hover: var(--myaccount-button-bg-hover);
+$myaccount-button-icon-path1: var(--myaccount-button-icon-path1);
+$myaccount-button-icon-path2: var(--myaccount-button-icon-path2);
+$myaccount-button-border: var(--myaccount-button-border);
+$myaccount-button-border-hover: var(--myaccount-button-border-hover);
+$myaccount-button-text: var(--myaccount-button-text);
+$myaccount-button-text-hover: var(--myaccount-button-text-hover);
+
+$main-spinner: var(--main-spinner);
+$main-spinner-text: var(--main-spinner-text);
+$social-links: var(--social-links);
+$social-links-border: var(--social-links-border);
+$banner-price: var(--banner-price);
+$banner-price-discount: var(--banner-price-discount);
+$banner-title: var(--banner-title);
+$banner-text: var(--banner-text);
+$main-background: var(--main-background);
+$available-now: var(--available-now);
+$available-now-border: var(--available-now-border);
+$pre-sale-text: var(--pre-sale-text);
+$pre-sale-background: var(--pre-sale-background);
+$days-left: var(--days-left);
+$banner-background: var(--banner-background);
+$social-links-hover: var(--social-links-hover);
+
+$sidebar-title: var(--sidebar-title);
+$sidebar-title-bg: var(--sidebar-title-bg);
+$sidebar-item-hover: var(--sidebar-item-hover);
+$sidebar-item-active: var(--sidebar-item-active);
+$sidebar-text-svg-hover: var(--sidebar-text-svg-hover);
+$sidebar-text-svg-active: var(--sidebar-text-svg-active);
+$sidebar-text-svg-default: var(--sidebar-text-svg-default);
+$opened-sidebar-bg: var(--opened-sidebar-bg);
+
+$presale-item-bg: var(--presale-item-bg);
+$presale-item-text-svg: var(--presale-item-text-svg);
+$coming-soon-item-bg: var(--coming-soon-item-bg);
+$coming-soon-item-text-svg: var(--coming-soon-item-text-svg);
+
+$amt-token-circle-first: var(--amt-token-circle-first);
+$amt-token-circle-second: var(--amt-token-circle-second);
+$amt-token-circle-third: var(--amt-token-circle-third);
+$amt-token-border: var(--amt-token-border);
+$amt-token-bg: var(--amt-token-bg);
+
+$news-bg: var(--news-bg);
+
+$news-component-bg: var(--news-component-bg);
+$news-component-border: var(--news-component-border);
+$news-text-color: var(--news-text-color);
+$news-title-color: var(--news-title-color);
+
+$expert-title: var(--expert-title);
+$expert-requirements-bg: var(--expert-requirements-bg);
+$expert-requirements-count: var(--expert-requirements-count);
+$expert-requirements-text: var(--expert-requirements-text);
+$expert-footer-text: var(--expert-footer-text);
+
+$partners-bg: var(--partners-bg);
+$partners-line: var(--partners-line);
+$partners-title: var(--partners-title);
+$partners-medias-bg: var(--partners-medias-bg);
+$partners-first-svg: var(--partners-first-svg);
+$partners-medias-bg-hover: var(--partners-medias-bg-hover);

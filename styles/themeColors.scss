@@ -1,0 +1,233 @@
+$mainBackground: "/assets/images/mainInfo/mainBackground.png";
+$mainBackgroundLight: "/assets/images/mainInfo/mainBackgroundLight.png";
+
+:root {
+  --body-bg: #030507;
+
+  --heading: #cceafe;
+  --header-bg: #0f1e29;
+  --header-item-bg: #0f1e29;
+  --header-menu-button: #ffff;
+  --header-menu-button-focus: #142837;
+
+  --mode-switch-svg: #e6f4ff;
+  --mode-switch-border: #003c64;
+  --mode-switch-shadow: #005996;
+  --mode-switch-item-bg: #000f19;
+  --mode-switch-svg-hover: #0095fa;
+
+  --dropdown-dots: #8793a0;
+  --dropdown-hover: #03080d;
+  --dropdown-dots-bg: #060f1a;
+  --dropdown-dots-hover: #e6f4ff;
+  --dropdwon-bg: #142837;
+
+  --lang-drop: #fff;
+  --news-component-border: #002d4b;
+
+  --button-secondary-text: #0095fa;
+  --button-secondary-text-hover: #0095fa;
+  --button-secondary-text-disabled: #003c64;
+  --button-secondary-border: #005996;
+  --button-secondary-border-hover: #005996;
+  --button-secondary-border-disabled: #003c64;
+  --button-secondary-bg-hover: #0e223a;
+
+  --button-tertiary-text: #8793a0;
+  --button-tertiary-text-hover-focus: #e6f4ff;
+  --button-tertiary-text-disabled: #3f5166;
+  --button-tertiary-border-focus: #003c64;
+  --button-tertiary-bg: #060f1a;
+  --button-tertiary-bg-hover-focus: #03080d;
+  --button-tertiary-bg-disabled: #0b1b2d;
+
+  --account-switch-icon: #6f7d8c;
+  --account-switch-icon-active: #e6f4ff;
+  --account-switch-icon-deactive: #6f7d8c;
+  --account-switch-wrapper: #142837;
+  --account-switch-container: #000f19;
+  --account-switch-text: #8793a0;
+  --account-switch-arrow: #8793a0;
+  --account-switch-arrow-bg: #273c53;
+  --account-switch-title: #e6f4ff;
+
+  --myaccount-button-bg: #193344;
+  --myaccount-button-icon-path1: #070f14;
+  --myaccount-button-icon-path2: #6f7d8c;
+  --myaccount-button-border: #3f5166;
+  --myaccount-button-text: #9fa8b3;
+  --myaccount-button-bg-hover: #142837;
+  --myaccount-button-border-hover: #3f5166;
+  --myaccount-button-text-hover: #9fa8b3;
+
+  --main-spinner: #b3dffe;
+
+  --social-links: #0086e1;
+  --banner-price: #e6f4ff;
+  --banner-price-discount: #f27d7d;
+  --banner-title: #e6f4ff;
+  --banner-text: #e6f4ff;
+  --available-now: #088c53;
+  --available-now-border: #c2eedb;
+  --main-spinner-text: #66bffc;
+  --pre-sale-background: #032f1c;
+  --pre-sale-text: #47cb92;
+  --days-left: #266bd2;
+  --social-links-hover: #0e223a;
+
+  --main-background: "/assets/images/mainInfo/mainBackgroundLight.png";
+  --banner-background: "/assets/images/programInfo/amtBannerBackgroundLight.png";
+
+  --sidebar-text-svg-default: #9fa8b3;
+  --sidebar-title: #0077c8;
+  --sidebar-title-bg: #142837;
+  --sidebar-item-hover: #142837;
+  --sidebar-item-active: #193344;
+  --sidebar-text-svg-hover: #e6f4ff;
+  --sidebar-text-svg-active: #0095fa;
+  --opened-sidebar-bg: rgba(0, 0, 0, 0.7);
+
+  --presale-item-bg: #032f1c;
+  --presale-item-text-svg: #47cb92;
+  --coming-soon-item-bg: #3b2811;
+  --coming-soon-item-text-svg: #f0b774;
+
+  --amt-token-circle-first: #003c64;
+  --amt-token-circle-second: #002d4b;
+  --amt-token-circle-third: #001e32;
+  --amt-token-border: #004b7d;
+  --amt-token-bg: #000f19;
+
+  --news-bg: #000f19;
+  --news-component-bg: #002d4b;
+  --news-component-border: #002d4b;
+  --news-text-color: #b3dffe;
+  --news-title-color: #cceafe;
+
+  --expert-title: #b3dffe;
+  --expert-requirements-bg: #c9daf4;
+  --expert-requirements-count: #1d509e;
+  --expert-requirements-text: #80cafd;
+  --expert-footer-text: #8793a0;
+
+  --partners-bg: #000f19;
+  --partners-line: #002d4b;
+  --partners-title: #b3dffe;
+  --partners-medias-bg: #03080d;
+  --partners-medias-bg-hover: #142837;
+}
+
+[theme="dark"] {
+  --body-bg: #f0f8ff;
+
+  --heading: #002d4b;
+  --header-bg: #caddf3;
+  --header-item-bg: #e5f2ff;
+  --header-menu-button: #010406;
+  --header-menu-button-focus: #aac0d8;
+
+  --mode-switch-svg: #97aac0;
+  --mode-switch-border: #c4d9f2;
+  --mode-switch-shadow: #85ddb7;
+  --mode-switch-item-bg: #aac0d8;
+  --mode-switch-svg-hover: #273c53;
+
+  --dropdown-dots: #576779;
+  --dropdown-hover: #e5f2ff;
+  --dropdown-dots-bg: #e5f2ff;
+  --dropdown-dots-hover: #273c53;
+  --dropdwon-bg: #142837;
+
+  --lang-drop: #394048;
+
+  --button-secondary-text: #0086e1;
+  --button-secondary-text-hover: #0086e1;
+  --button-secondary-text-disabled: #99d5fd;
+  --button-secondary-border: #19a0fb;
+  --button-secondary-border-hover: #0086e1;
+  --button-secondary-border-disabled: #99d5fd;
+  --button-secondary-bg-hover: #e6f4ff;
+
+  --button-tertiary-text: #3f5166;
+  --button-tertiary-text-hover-focus: #273c53;
+  --button-tertiary-text-disabled: #aac0d8;
+  --button-tertiary-border-focus: #aac0d8;
+  --button-tertiary-bg: #f0f7ff;
+  --button-tertiary-bg-hover-focus: #e5f2ff;
+  --button-tertiary-bg-disabled: #f8fbfe;
+
+  --account-switch-icon: #576779;
+  --account-switch-icon-active: #3f5166;
+  --account-switch-icon-deactive: #8495a8;
+  --account-switch-wrapper: #caddf3;
+  --account-switch-container: #aac0d8;
+  --account-switch-text: #3f5166;
+  --account-switch-arrow: #8495a8;
+  --account-switch-arrow-bg: #c4d9f2;
+  --account-switch-title: #010406;
+
+  --myaccount-button-bg: #dcedff;
+  --myaccount-button-bg-hover: #e5f2ff;
+  --myaccount-button-text-hover: #262b30;
+  --myaccount-button-border-hover: #c4d9f2;
+  --myaccount-button-border: #c4d9f2;
+  --myaccount-button-text: #4c5560;
+  --myaccount-button-icon-path1: #718090;
+  --myaccount-button-icon-path2: #caddf3;
+
+  --main-spinner: #002d4b;
+  --main-spinner-text: #005996;
+
+  --social-links-border: ;
+  --social-links: #33aafb;
+  --banner-price: #004b7d;
+  --banner-price-discount: #b23d3d;
+  --banner-title: #001e32;
+  --banner-text: #3f5166;
+  --available-now: #0aba6e;
+  --available-now-border: #0aba6e;
+  --pre-sale-background: #c2eedb;
+  --pre-sale-text: #088c53;
+  --days-left: #5c90dd;
+  --social-links-hover: #fff;
+  --main-background: "/assets/images/mainInfo/mainBackground.png";
+  --banner-background: "/assets/images/programInfo/amtBackgroundBanner.png";
+
+  --sidebar-text-svg-default: #5f6b78;
+  --sidebar-title: #33aafb;
+  --sidebar-title-bg: #aac0d8;
+  --sidebar-title-bg: #aac0d8;
+  --sidebar-item-active: #0095fa;
+  --sidebar-item-hover: #0095fa;
+  --sidebar-text-svg-hover: #262b30;
+  --sidebar-text-svg-active: #e6f4ff;
+  --opened-sidebar-bg: rgba(255, 255, 255, 0.7);
+
+  --presale-item-bg: #c2eedb;
+  --presale-item-text-svg: #088c53;
+  --coming-soon-item-bg: #fae7d1;
+  --coming-soon-item-text-svg: #b07734;
+
+  --amt-token-circle-first: #cceafe;
+  --amt-token-circle-second: #99d5fd;
+  --amt-token-circle-third: #66bffc;
+  --amt-token-border: #caddf3;
+  --amt-token-bg: #dcedff;
+  --news-bg: #dcedff;
+  --news-component-bg: #b3dffe;
+  --news-component-border: #99d5fd;
+  --news-text-color: #002d4b;
+  --news-title-color: #262b30;
+
+  --expert-title: #262b30;
+  --expert-requirements-bg: #1d509e;
+  --expert-requirements-count: #c9daf4;
+  --expert-requirements-text: #004b7d;
+  --expert-footer-text: #5f6b78;
+
+  --partners-bg: #dcedff;
+  --partners-line: #c4d9f2;
+  --partners-title: #262b30;
+  --partners-medias-bg: #e6f4ff;
+  --partners-medias-bg-hover: #f8fbfe;
+}
